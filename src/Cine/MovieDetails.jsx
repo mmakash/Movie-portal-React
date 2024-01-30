@@ -1,7 +1,7 @@
 import React from "react";
 import { getImgUrl } from "../utils/cine-utils";
 
-const MovieDetails = ({ movie, onClose }) => {
+const MovieDetails = ({ movie, onClose,OnCartAdd }) => {
   return (
     <>
       <div className="fixed top-0 left-0 w-screen h-screen z-50 bg-black/60 backdrop-blur-sm">
@@ -27,6 +27,7 @@ const MovieDetails = ({ movie, onClose }) => {
               </p>
               <div className="grid lg:grid-cols-2 gap-2">
                 <a
+                onClick={(e)=>OnCartAdd(e,movie)}
                   className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
                   href="#"
                 >
